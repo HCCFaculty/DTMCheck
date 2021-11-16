@@ -4859,6 +4859,7 @@ self.C3_JsPropNameTable = [
 	{Exclamation: 0},
 	{DTTitle: 0},
 	{playbutton: 0},
+	{TitleText: 0},
 	{Girls: 0},
 	{StepStage1: 0},
 	{ApplesCollected: 0},
@@ -4960,7 +4961,8 @@ self.C3_JsPropNameTable = [
 	{JulieSeen: 0},
 	{ChickySeen: 0},
 	{SagilSeen: 0},
-	{S5End: 0}
+	{S5End: 0},
+	{PlayEnabled: 0}
 ];
 }
 

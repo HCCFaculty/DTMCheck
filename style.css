@@ -52,3 +52,8 @@ html, body, canvas {
 	src: url('fonts/lato-regular.ttf') format('truetype');
 }
 
+@font-face {
+	font-family: 'painting_with_chocolate';
+	src: url('fonts/painting_with_chocolate.ttf') format('truetype');
+}
+
