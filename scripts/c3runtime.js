@@ -4571,6 +4571,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.MoveTo.Cnds.IsMoving,
 		C3.Behaviors.Fade.Cnds.OnFadeInEnd,
 		C3.Behaviors.Fade.Cnds.OnFadeOutEnd,
+		C3.Plugins.Audio.Acts.FadeVolume,
 		C3.Plugins.System.Acts.GoToLayout,
 		C3.Plugins.Touch.Cnds.OnTouchStart,
 		C3.Plugins.Browser.Cnds.IsFullscreen,
@@ -4632,10 +4633,10 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Arr.Cnds.CompareX,
 		C3.Plugins.Text.Acts.SetFontColor,
 		C3.Plugins.System.Exps.rgbex255,
+		C3.Plugins.System.Acts.ResetGlobals,
 		C3.Plugins.Sprite.Cnds.CompareHeight,
 		C3.Plugins.Text.Acts.SetPos,
-		C3.Plugins.Text.Acts.MoveToLayer,
-		C3.Plugins.System.Acts.ResetGlobals
+		C3.Plugins.Text.Acts.MoveToLayer
 	];
 };
 self.C3_JsPropNameTable = [
@@ -5259,7 +5260,7 @@ self.C3_ExpressionFuncs = [
 		() => "ChiefSmall",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => (and((("The village needs food." + "\n") + "Bring me "), (5 - v0.GetValue())) + " apple(s).");
+			return () => (and((("The village needs food." + "\n") + "Bring me "), (3 - v0.GetValue())) + " apple(s).");
 		},
 		() => "Deliver",
 		() => "We have food for now!\nWhy don't you talk to Sheila?",
@@ -5270,7 +5271,7 @@ self.C3_ExpressionFuncs = [
 		() => "I can't cook without the right ingredients...",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => (and((("I need wood to make a bow and arrows..." + "\n") + "Bring me "), (3 - v0.GetValue())) + " piece(s).");
+			return () => (and((("I need wood to make a bow and arrows..." + "\n") + "Bring me "), (2 - v0.GetValue())) + " piece(s).");
 		},
 		() => "I hope you like the bow!\nPress the SPACEBAR to shoot an arrow.",
 		() => "I hope you like the bow!\nPress the ARROW BUTTON to shoot an arrow.",
@@ -5278,12 +5279,12 @@ self.C3_ExpressionFuncs = [
 		() => "Apples are good, but we can store meat for the winter...",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => (and("Let's get cooking! Bring me ", (5 - v0.GetValue())) + " boar(s) to roast!");
+			return () => (and("Let's get cooking! Bring me ", (3 - v0.GetValue())) + " boar(s) to roast!");
 		},
 		() => "Now we're cooking!\nGo talk to the chief...\nHe seems worried...",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => (((and((("Shelia is sick." + "\n") + "Bring me "), (3 - v0.GetValue())) + " herb(s)") + "\n") + "quick!");
+			return () => (((and((("Shelia is sick." + "\n") + "Bring me "), (2 - v0.GetValue())) + " herb(s)") + "\n") + "quick!");
 		},
 		() => "Thanks for the herbs.\nLet's hope it's not too late...",
 		() => "Apple",
@@ -5336,6 +5337,7 @@ self.C3_ExpressionFuncs = [
 		() => 6,
 		() => 370,
 		() => 225,
+		() => -100,
 		() => "Loading...",
 		() => "Town",
 		() => "Start2T",
@@ -5377,6 +5379,7 @@ self.C3_ExpressionFuncs = [
 		() => "BeggarSmall",
 		() => "Thanks for the food. Many of my friends\nhave died of starvation recently...",
 		() => "I'm a starving artist.\nDo you have any food\nto spare?",
+		() => "",
 		() => "Richman",
 		() => "RichmanSmall",
 		() => "Running water and canned food?\nNow THIS is 18th century living!",
@@ -5582,6 +5585,7 @@ self.C3_ExpressionFuncs = [
 		() => "Simulate Controls7",
 		() => 125,
 		() => "Simulate Controls8",
+		() => 150,
 		() => "End S3",
 		() => 200,
 		() => 80,
@@ -5628,7 +5632,6 @@ self.C3_ExpressionFuncs = [
 		() => 4500,
 		() => 105.46891479517936,
 		() => "You did it!\nNow let's get to work!",
-		() => "",
 		() => "MiniMap2",
 		() => "PlayerMap2",
 		() => "Car2",
@@ -5757,7 +5760,6 @@ self.C3_ExpressionFuncs = [
 		() => "Shanghai",
 		() => "I’m closing early tonight, my father is turning 100 years old today! We’re taking him out to celebrate!\n\nI'm getting older just waiting for you to buy something...",
 		() => "Sydney",
-		() => "Sidney",
 		() => "My wife is the best surgeon in Sydney. She works at the biggest hospital and takes care of lots of patients. We have the best medical care money can buy...\n\nSorry... what can I get you?",
 		() => "Tokyo",
 		() => "I love the night life here in the city. There’s always something to do and something to see! I could never survive in the country!\n\nCome on and make a purchase, I don't want to be late to the show!",
@@ -6004,7 +6006,6 @@ self.C3_ExpressionFuncs = [
 			return () => f0(0, 150, 0);
 		},
 		() => 1600,
-		() => 150,
 		() => 850,
 		() => 1050,
 		p => {
@@ -6160,6 +6161,7 @@ self.C3_ExpressionFuncs = [
 		() => "Chicky",
 		() => "ChickySmall",
 		() => "My niece comes to visit me every week, it's great to have her company.",
+		() => "Deliver Sounds",
 		() => "S5UI",
 		() => "Seen",
 		() => "S5 End ",
