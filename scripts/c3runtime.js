@@ -5521,12 +5521,6 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpBehavior() * 0.4);
 		},
-		() => 4035,
-		() => 1765,
-		p => {
-			const n0 = p._GetNode(0);
-			return () => (n0.ExpObject() + 75);
-		},
 		() => "Delivery",
 		() => 3680,
 		() => 1760,
